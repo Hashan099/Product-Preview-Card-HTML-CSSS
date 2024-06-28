@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Colors */
+  --Darkcyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+
+  --Verydarkblue: hsl(212, 21%, 14%);
+  --Darkgrayishblue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+
+  /* fonts */
+
+  --fontfamily: "Fraunces", serif;
+}
+
+html {
+  font-size: 14px;
+  font-family: var(--fontfamily);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  min-height: 100vh;
+  background-color: var(--Cream);
+  padding: 2rem;
+}
+
+.flex-item {
+  width: 100%;
+  background-color: var(--White);
+  border-radius: 1rem 1rem 0 0;
+}
+
+.flex-item img {
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 1rem 1rem 0 0;
+}
+
+article {
+  padding: 1rem;
+}
+
+article .p1 {
+  margin-top: 1rem;
+  color: var(--Darkgrayishblue);
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+}
+
+article h1 {
+  margin-top: 1rem;
+}
+
+article .p2 {
+  margin-top: 1rem;
+  color: var(--Darkgrayishblue);
+  line-height: 1.5rem;
+}
+
+article .p3 {
+  margin-top: 1rem;
+  color: var(--Darkcyan);
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+.p3 span {
+  text-decoration: line-through;
+  font-size: 1rem;
+  color: var(--Darkgrayishblue);
+  margin-left: 0.5rem;
+}
+
+button {
+  display: block;
+  text-align: center;
+  background-color: var(--Darkcyan);
+  color: var(--White);
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  width: 100%;
+}
+
+button:hover,
+button:active {
+  background-color: var(--Verydarkblue);
+}
+
+/* Media query for desktops */
+
+@media screen and (min-width: 768px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Cream);
+  }
+
+  .container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  figure img {
+    box-shadow: rgba(255, 255, 255, 0.885) 0px 0px 0px 3px;
+  }
+
+  .flex-item:first-child {
+    background-color: var(--Cream);
+    margin-right: 1rem;
+    width: auto;
+  }
+
+  .flex-item:last-child {
+    background-color: var(--Cream);
+    border-radius: 2rem;
+    display: grid;
+    place-content: center;
+    width: 100%;
+    margin-left: 2rem;
+    width: 50%;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+      rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  }
+}
